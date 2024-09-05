@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import SocialIcon from '../Shared/SocialIcon/SocialIcon';
 const SignUp = () => {
     const { createUser } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -71,6 +72,7 @@ const SignUp = () => {
                         <button className="w-full py-4 rounded-md font-semibold bg-[#000000] text-white">Sign Up</button>
                     </div>
                     <div className="divider">or </div>
+                    <SocialIcon></SocialIcon>
                     <div>
                         <p className='font-medium text-center'>Have an account? <Link className='text-blue-600' to='/signin'>Sign In</Link></p>
                     </div>

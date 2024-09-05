@@ -10,6 +10,7 @@ import Main from './layout/Main/Main';
 import SignUp from './components/SignUp/SignUp';
 import AuthProvider from './provider/AuthProvider/AuthProvider';
 import SignIn from './components/SignIn/SignIn';
+import Products from './components/Products/Products';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,11 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: ''
+      },
+      {
+        path: '/products',
+        element: <Products></Products>,
+        loader: () => fetch('products.json')
       },
       {
         path: 'signup',

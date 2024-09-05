@@ -4,6 +4,7 @@ import bgImg from '../../assets/signup/signup.png'
 import { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import SocialIcon from '../Shared/SocialIcon/SocialIcon';
 
 const SignIn = () => {
     const { signIn } = useContext(AuthContext);
@@ -36,7 +37,7 @@ const SignIn = () => {
     return (
         <div className='md:flex gap-28 max-w-[1200px] mx-auto' >
             <div className='md:w-1/2 md:flex items-center justify-center'>
-                <form onSubmit={handleSignIn} className="bg-[#F5F5F5] p-6 space-y-6 w-full">
+                <form onSubmit={handleSignIn} className="bg-[#F5F5F5] px-6 py-12 space-y-6 w-full">
                     <div>
                         <h6 className='font-bold text-2xl'>Welcome Back!</h6>
                         <p className='text-[#707070] font-medium'>Enter your Credentials to access your account</p>
@@ -55,6 +56,7 @@ const SignIn = () => {
                         <button className="w-full py-4 rounded-md font-semibold bg-[#000000] text-white">Sign In</button>
                     </div>
                     <div className="divider">or </div>
+                    <SocialIcon></SocialIcon>
                     <div>
                         <p className='font-medium text-center'>Are you new? <Link className='text-blue-600' to='/signup'>Sign Up</Link></p>
                     </div>
