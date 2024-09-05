@@ -43,12 +43,15 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end gap-2">
                 <div className="avatar">
                     <div className="w-12 h-12 rounded-full">
                         <img src={man} />
                     </div>
                 </div>
+                <Link to='/signin'>
+                    <button className='bg-blue-500 text-white px-4 py-3 rounded-md font-semibold'>Sign In</button>
+                </Link>
             </div>
         </nav>
     );
