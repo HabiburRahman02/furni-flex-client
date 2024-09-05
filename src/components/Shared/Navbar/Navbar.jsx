@@ -2,7 +2,11 @@
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/images/logo.png'
 import man from '../../../assets/images/account.png'
+import { useContext } from 'react';
+import { AuthContext } from '../../../provider/AuthProvider/AuthProvider';
+import Swal from 'sweetalert2';
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
     const links = <>
         <li><Link>Home</Link></li>
         <li><Link>Products</Link></li>
@@ -10,6 +14,19 @@ const Navbar = () => {
         <li><Link>Custom</Link></li>
         <li><Link>Blog</Link></li>
     </>
+
+    const handleSignOut = () => {
+        logOut()
+            .then(() => {
+                Swal.fire({
+                    position: "top-center",
+                    icon: "success",
+                    title: "Sign Out Success",
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            })
+    }
     return (
         <nav className="mb-24 max-w-[1200px] mx-auto navbar bg-base-100 py-6 border-b-[1px]">
             <div className="navbar-start">
@@ -49,9 +66,17 @@ const Navbar = () => {
                         <img src={man} />
                     </div>
                 </div>
-                <Link to='/signin'>
-                    <button className='bg-blue-500 text-white px-4 py-3 rounded-md font-semibold'>Sign In</button>
-                </Link>
+                {
+                    user?.email ? <>
+                        <button
+                            onClick={handleSignOut}
+                            className='bg-blue-500 text-white px-4 py-3 rounded-md font-semibold'>Sign Out</button>
+                    </> :
+                        <Link to='/signin'>
+                            <button className='bg-blue-500 text-white px-4 py-3 rounded-md font-semibold'>Sign In</button>
+                        </Link>
+                }
+
             </div>
         </nav>
     );

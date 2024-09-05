@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import Main from './layout/Main/Main';
 import SignUp from './components/SignUp/SignUp';
+import AuthProvider from './provider/AuthProvider/AuthProvider';
+import SignIn from './components/SignIn/SignIn';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: 'signup',
         element: <SignUp></SignUp>
+      },
+      {
+        path: 'signin',
+        element: <SignIn></SignIn>
       }
     ]
   },
@@ -29,7 +35,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <div className=''>
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </div>
   </StrictMode>,
 )
