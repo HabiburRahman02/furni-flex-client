@@ -33,7 +33,7 @@ const SignUp = () => {
                         timer: 1500
                     })
                     form.reset();
-                    navigate('/')
+                    navigate('/products')
                 }
             })
             .catch(error => {

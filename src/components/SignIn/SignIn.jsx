@@ -28,7 +28,7 @@ const SignIn = () => {
                     showConfirmButton: false,
                     timer: 1500
                 })
-                navigate('/')
+                navigate('/products')
             })
             .catch(error =>
                 console.log(error)
