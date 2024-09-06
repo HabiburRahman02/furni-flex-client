@@ -15,7 +15,7 @@ const CartItems = () => {
                     user &&
                     <div>
                         {
-                            items.map(item => <ItemCard
+                            items?.map(item => <ItemCard
                                 key={item._id}
                                 item={item}
                                 items={items}
