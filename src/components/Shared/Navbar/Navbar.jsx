@@ -5,6 +5,8 @@ import man from '../../../assets/images/account.png'
 import { useContext } from 'react';
 import { AuthContext } from '../../../provider/AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
+import { FaCartShopping } from "react-icons/fa6";
+
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
     const links = <>
@@ -61,6 +63,9 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-2">
+                <Link to='/cartItems'>
+                    <FaCartShopping className='h-7 w-7'></FaCartShopping>
+                </Link>
                 <div className="avatar">
                     <div className="w-12 h-12 rounded-full">
                         <img src={man} />

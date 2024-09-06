@@ -5,7 +5,7 @@ import ProductFirstCol from "../ProductFirstCol/ProductFirstCol";
 
 const Products = () => {
     const products = useLoaderData();
-    console.log(products)
+    // console.log(products)
     return (
         <div className="max-w-[1200px] mx-auto">
             <div className="md:flex gap-8 space-y-8 md:space-y-0">
@@ -15,7 +15,7 @@ const Products = () => {
                 <div className="md:w-3/4 grid grid-cols-1 md:grid-cols-3 gap-8">
                     {
                         products.map(product => <ProductCard
-                            key={product.id}
+                            key={product._id}
                             product={product}
                         ></ProductCard>)
                     }

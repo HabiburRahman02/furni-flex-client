@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "name": "Recliner Chair Wood",
         "imageUrl": "https://i.postimg.cc/3JrtC8kT/Image.png",
         "prevPrice": 350.00,
@@ -9,7 +8,6 @@
         "description": "It has a backrest that can be tilted back, and often a footrest"
     },
     {
-        "id": 2,
         "name": "Timber Ride Padded   ",
         "imageUrl": "https://i.postimg.cc/85HhjvBr/Image-1.png",
         "prevPrice": 75.00,
@@ -18,7 +16,6 @@
         "description": "High Back Rocking Side Pocket Portable Folding Outdoor "
     },
     {
-        "id": 3,
         "name": "Colored Wooden Chaird",
         "imageUrl": "https://i.postimg.cc/gkv6J8zc/Image-2.png",
         "prevPrice": 240.00,
@@ -27,7 +24,6 @@
         "description": "It has a backrest that can be tilted back, and often a footrest"
     },
     {
-        "id": 4,
         "name": "Blank Bamboo Wicker",
         "imageUrl": "https://i.postimg.cc/Qdm9gDKR/Image-3.png",
         "prevPrice": 725.00,
@@ -36,7 +32,6 @@
         "description": "High Back Rocking Side Pocket Portable Folding Outdoor "
     },
     {
-        "id": 5,
         "name": "Isolated Wooden Rock",
         "imageUrl": "https://i.postimg.cc/D01mS3Kp/Image-4.png",
         "prevPrice": 380.00,
@@ -45,7 +40,6 @@
         "description": "It has a backrest that can be tilted back, and often a footrest"
     },
     {
-        "id": 6,
         "name": "Minimal Empty Rocking ",
         "imageUrl": "https://i.postimg.cc/xTycYQ5c/Image-5.png",
         "prevPrice": 225.00,

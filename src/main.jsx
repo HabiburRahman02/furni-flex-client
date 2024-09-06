@@ -11,6 +11,7 @@ import SignUp from './components/SignUp/SignUp';
 import AuthProvider from './provider/AuthProvider/AuthProvider';
 import SignIn from './components/SignIn/SignIn';
 import Products from './components/Products/Products';
+import CartItems from './components/CartItems/CartItems';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
       {
         path: '/products',
         element: <Products></Products>,
-        loader: () => fetch('products.json')
+        loader: () => fetch('http://localhost:5000/products')
       },
       {
         path: 'signup',
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
       {
         path: 'signin',
         element: <SignIn></SignIn>
+      },
+      {
+        path: '/cartItems',
+        element: <CartItems></CartItems>,
+        loader: () => fetch('http://localhost:5000/carts')
       }
     ]
   },
