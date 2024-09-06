@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
                 presentPrice
             }
 
-            fetch('http://localhost:5000/carts', {
+            fetch('https://furni-flex-server-5brc9u7oj-habibur-rahman-habibs-projects.vercel.app/carts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

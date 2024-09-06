@@ -19,7 +19,7 @@ const ItemCard = ({ item, items, setItems }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/carts/${_id}`, {
+                fetch(`https://furni-flex-server-5brc9u7oj-habibur-rahman-habibs-projects.vercel.app/carts/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

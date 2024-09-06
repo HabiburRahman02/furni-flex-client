@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       {
         path: '/products',
         element: <Products></Products>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://furni-flex-server-5brc9u7oj-habibur-rahman-habibs-projects.vercel.app/products')
       },
       {
         path: 'signup',
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
       {
         path: '/cartItems',
         element: <CartItems></CartItems>,
-        loader: () => fetch('http://localhost:5000/carts')
+        loader: () => fetch('https://furni-flex-server-5brc9u7oj-habibur-rahman-habibs-projects.vercel.app/carts')
       }
     ]
   },
